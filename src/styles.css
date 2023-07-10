@@ -1,0 +1,102 @@
+html {
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
+}
+
+body {
+  margin: 0;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+path {
+  fill: #2a354d;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.tooltip-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  z-index: 9999;
+}
+.return-button {
+  padding: 8px 16px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Добавлено свойство transition */
+}
+
+.return-button:hover {
+  background-color: #00bfff; /* Новый цвет фона при наведении */
+}
+.notification {
+  position: fixed;
+  top: 123px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80vw;
+  max-height: 80vh; /* Добавлено свойство max-height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-width 0.3s ease, max-height 0.3s ease; /* Добавлено свойство max-height в анимацию */
+}
+
+.notification h4 {
+  font-size: 16px;
+  transition: font-size 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .notification {
+    max-width: 90vw;
+    max-height: 90vh; /* Изменено значение max-height */
+  }
+
+  .notification h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .notification {
+    max-width: 90vw;
+    max-height: 90vh; /* Изменено значение max-height */
+    top: 1%;
+    left: 10px;
+    transform: none;
+  }
+
+  .notification h4 {
+    font-size: 12px;
+  }
+}
